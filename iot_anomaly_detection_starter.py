@@ -46,7 +46,6 @@ X = scaler.fit_transform(X_raw)
 contam = 0.05
 if y_true is not None:
     contam = max(1e-3, float(np.mean(y_true)))
-
 iso = IsolationForest(
     n_estimators=250,
     max_samples="auto",
